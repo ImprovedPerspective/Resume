@@ -1,13 +1,6 @@
-% E. Dunham -- Resume
-% Contents Copyright (C) 2014 - 2016, E. Dunham
+% Jacob Ruff
 
-% LaTeX code for rendering the resume is distributed under the MIT license.
-% See LICENSE.txt. It means you can use the code for whatever you want,
-% including your own resume, but I'm not liable if it catches your computer on
-% fire.
 
-% Template originally developed by E. Dunham
-% https://github.com/edunham/resume/blob/master/resume.tex
 \usepackage[normalem]{ulem} % for the underlines
 \usepackage[compact]{titlesec} % Shrink default spacings
 \usepackage{tabto} % For aligning skills section
@@ -22,7 +15,7 @@
 
 \newcommand{\heading}[1]{
 %    \section*{\centering\uline{\hfill #1 \hfill }} % Center the headings
-    \section*{\uline{\hfill #1 }} % Right-align the headings
+    \section*{\uline{#1 \hfill}} % Right-align the headings
 }
 \newcommand{\squish}{
     \setlength{\parskip}{\whitespaciness pt}
@@ -30,13 +23,13 @@
 \newcommand{\when}[1]{ % naming this 'date' would conflict with builtins
     \typeoffill \texttt{ #1}
 }
-\newcommand{\experience}[3]{ % place, optional title, date
-    \ifx&#2&
-        \item[{#1}]
-    \else
-        \item[{#1}, \emph{#2}]
-    \fi
-    \when{#3}
+\newcommand{\experience}[4]{ % place, optional title, date
+\item[]
+	{\bf#1,}{ \emph{ #2} }\hfill #4
+
+
+	{\emph{#3} }
+
 }
 \newcommand{\event}[4]{
     \bf{#1} \tabto{2in} \texttt{#2} \tabto{3in} \normalfont
@@ -46,8 +39,9 @@
     ``{#4}''
 }
 \newcommand{\contact}[4]{
-    \centerline{ \large \texttt{ #1 $\bullet$ #2 $\bullet$ #3 }}
-    \centerline{ \emph{ #4  $\bullet$ R\'{e}sum\'{e} current as of \today}}
+	\centerline{ \large \texttt{ #1 $\hfill$ #2}}
+	\centerline{ \large \texttt{ #3 $\hfill$ #4}}
+    %\centerline{ \emph{ #4  $\bullet$ R\'{e}sum\'{e} current as of \today}}
 }
 \newcommand{\skill}[2]{
     \textbf{#1} \tabto{2.5in} #2
