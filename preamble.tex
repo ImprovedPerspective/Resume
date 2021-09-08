@@ -15,7 +15,7 @@
 
 \newcommand{\heading}[1]{
 %    \section*{\centering\uline{\hfill #1 \hfill }} % Center the headings
-    \section*{\uline{#1 \hfill}} % Right-align the headings
+    \section*{\normalsize \uline{#1 \hfill}} % Right-align the headings
 }
 \newcommand{\squish}{
     \setlength{\parskip}{\whitespaciness pt}
@@ -46,6 +46,9 @@
 \newcommand{\skill}[2]{
     \textbf{#1} \tabto{2.5in} #2
 }
+\newcommand{\class}[4]{
+\textbf{#1} {#2}\tab \textbf{#3} {#4}}
+
 % Write C++ all fancy-like
 % http://www.parashift.com/c++-faq-lite/latex-macros.html
 \newcommand{\CPP}{
